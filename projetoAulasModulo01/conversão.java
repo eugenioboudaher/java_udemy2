@@ -22,5 +22,12 @@ public class conversão {
         int ab = 2;
         String ac = Integer.toString(ab);
         System.out.println(ac);
+
+        int ad = 7;
+        String ae = Integer.toString(ad);
+        System.out.println(ae);
+
+        Integer af = 8888;
+        System.out.println(af.toString().length());
     }
 }

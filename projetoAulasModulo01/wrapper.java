@@ -15,6 +15,10 @@ public class wrapper {
        Boolean bo = Boolean.parseBoolean("true");
        System.out.println(bo.toString().toUpperCase());
 
+       Character z = '#';
+       System.out.println(z + "...");
+       System.out.println(b);
+
        
     }
 }

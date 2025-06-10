@@ -1,4 +1,4 @@
-package projetoAulasModulo01;
+package Udemy;
 
 public class strings {
 

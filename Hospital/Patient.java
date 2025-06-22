@@ -1,0 +1,29 @@
+package Hospital;
+
+public class Patient extends People {
+    private String diagnoses;
+    private Boolean discharge;
+
+    public Patient () {
+        super();
+    }
+
+    public Patient (int id, String name, String sex, int age, String diagnoses, Boolean discharge) {
+        super(id, name, sex, age);
+        this.diagnoses = diagnoses;
+        this.discharge = discharge;
+    }
+
+    public String getDiagnosis () {
+        return this.diagnoses;
+    }
+    
+    public Boolean getDischarge () {
+        return this.discharge;
+    }
+
+    public void setDiagnosis (String diagnosis) {
+        this.diagnoses = diagnosis;
+    }
+
+}

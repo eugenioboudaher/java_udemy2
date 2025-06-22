@@ -26,5 +26,15 @@ public class Hospitalstest {
         sistema.registerHospital(h5);
 
         sistema.showHospitalsList();
+
+        
+
+        
     }
+
+    Patient p1 = new Patient(1, "Amanda", "Feminino", 34, "Gripe", true);
+    Patient p2 = new Patient(2, "Carlos", "Masculino", 40, "Fratura", false);
+    Patient p3 = new Patient(3, "Fernanda", "Feminino", 29, "Alergia", true);
+    Patient p4 = new Patient(4, "Lucas", "Masculino", 50, "Covid-19", false);
+    Patient p5 = new Patient(5, "Ricardo", "Masculino", 61, "Hipertensão", true);
 }

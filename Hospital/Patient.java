@@ -25,5 +25,9 @@ public class Patient extends People {
     public void setDiagnosis (String diagnosis) {
         this.diagnoses = diagnosis;
     }
+    
+    public void setDischarge (Boolean discharge) {
+        this.discharge = true;
+    }
 
 }

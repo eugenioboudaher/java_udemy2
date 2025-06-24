@@ -28,14 +28,16 @@ public class Hospitals {
         private int numberOfRooms;
         private String city;
         private String state;
+        private List<Patient> patients = new ArrayList<>();
 
 
-        public HospitalUnit(String name, String type, int numberOfRooms, String city, String state) {
+        public HospitalUnit(String name, String type, int numberOfRooms, String city, String state, List<Patient> patients) {
             this.name = name;
             this.type = type;
             this.numberOfRooms = numberOfRooms;
             this.city = city;
             this.state = state;
+            this.patients = patients;
         }
 
 

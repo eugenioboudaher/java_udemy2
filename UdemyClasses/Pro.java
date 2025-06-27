@@ -4,12 +4,12 @@ package UdemyClasses;
 public class Pro {
     String nome;
     double preco;
-    double desconto;
+    static double desconto = 0.5;
 
-    public Pro (String nome, double preco, double desconto) {
+    public Pro (String nome, double preco) {
         this.nome = nome;
         this.preco = preco;
-        this.desconto = desconto;
+
     }
 
     public Pro () {};

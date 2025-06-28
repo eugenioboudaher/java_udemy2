@@ -6,13 +6,17 @@ public class Dataa {
     int mes = 1;
     int ano = 2025;
 
+    public Dataa (){
+        this(1, 1, 1970);
+    }
+
     public  Dataa (int dia, int mes, int ano ) {
         this.dia = dia;
         this.mes = mes;
         this.ano = ano;        
     }
 
-    public Dataa () {};
+
 
     public Boolean diaValidator(int valor) {
     return valor >= 1 && valor <= 31;

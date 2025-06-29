@@ -9,7 +9,13 @@ public class Pessoa {
         this.weight = weight;
     }
 
-    public void comer (Comida comida, double x) {
-        this.weight += x;
+    public void comer (Comida... comidas) {
+        for (Comida comida : comidas){
+            if (comida != null) {
+                this.weight += comida.peso;
+            }
+            
+        }
+        
     }
 }

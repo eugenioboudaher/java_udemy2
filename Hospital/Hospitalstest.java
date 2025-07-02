@@ -1,45 +1,51 @@
 package Hospital;
 
-import java.util.ArrayList;
+import java.time.LocalDateTime;
+
 
 public class Hospitalstest {
     public static void main(String[] args) {
-        Hospitals sistema = new Hospitals();
+        Doctor doctor1 = new Doctor("Cardiology", "Heart", "Harvard", 1, "Dr. Alice", "F", 45);
+        Doctor doctor2 = new Doctor("Neurology", "Brain", "Stanford", 2, "Dr. Bob", "M", 50);
+        Doctor doctor3 = new Doctor("Pediatrics", "Children", "Yale", 3, "Dr. Carol", "F", 40);
 
-        Hospitals.HospitalUnit h1 = new Hospitals.HospitalUnit("Hospital Geral de Fortaleza", "Público", 200, "Fortaleza", "Ceará", new ArrayList<>());
-        Hospitals.HospitalUnit h2 = new Hospitals.HospitalUnit("Hospital São Mateus", "Privado", 150, "Fortaleza", "Ceará", new ArrayList<>());
+        // Criando alguns pacientes
+        Patient patient1 = new Patient(101, "John Doe", "M", 30, "Flu", false);
+        Patient patient2 = new Patient(102, "Jane Smith", "F", 25, "Migraine", false);
+        Patient patient3 = new Patient(103, "Tom Brown", "M", 12, "Checkup", false);
 
-        sistema.registerHospital(h1);
-        sistema.registerHospital(h2);
-        sistema.showHospitalsList();
+        // Criando algumas salas (Rooms) — vou supor uma classe simples Rooms
+        Rooms room1 = new Rooms(201, "Surgery");
+        Rooms room2 = new Rooms(202, "Consultation");
+        Rooms room3 = new Rooms(203, "Pediatrics");
 
+        // Criando appointments
+        Appointment appointment1 = new Appointment(doctor1, patient1, room1, LocalDateTime.now());
+        Appointment appointment2 = new Appointment(doctor2, patient2, room2, LocalDateTime.now().plusHours(2));
+        Appointment appointment3 = new Appointment(doctor3, patient3, room3, LocalDateTime.now().plusDays(1));
 
-        Patient p1 = new Patient(1, "Amanda", "Feminino", 34, "Gripe", true);
-        Patient p2 = new Patient(2, "Carlos", "Masculino", 40, "Fratura", false);
-        Patient p3 = new Patient(3, "Fernanda", "Feminino", 29, "Alergia", true);
-        Patient p4 = new Patient(4, "Lucas", "Masculino", 50, "Covid-19", false);
-        Patient p5 = new Patient(5, "Ricardo", "Masculino", 61, "Hipertensão", true);
+        // Exibindo
+        appointment1.showAppointment();
+        System.out.println("------------");
+        appointment2.showAppointment();
+        System.out.println("------------");
+        appointment3.showAppointment();
+    }
+}
 
-        Doctor doctor1 = new Doctor(
-                "Pediatria",          
-                "Hospital Infantil",    
-                "USP",                   
-                201,                    
-                "Dra. Laura Martins",   
-                "F",                    
-                38                     
-        );
+// Rooms (exemplo básico)
+        class Rooms {
+            private int number;
+            private String type;
 
-    
-        Doctor doctor2 = new Doctor(
-            "Ortopedia",
-            "Hospital das Clínicas",
-            "Unicamp",
-            202,
-            "Dr. Bruno Ferreira",
-            "M",
-            46
-        );
+            public Rooms(int number, String type) {
+                this.number = number;
+                this.type = type;
+            }
+
+            public String toString() {
+                return String.format("Room #%d - %s", number, type);
+            }
 
 
        
@@ -47,4 +53,4 @@ public class Hospitalstest {
     }
 
 
-}
+

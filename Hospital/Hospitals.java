@@ -84,5 +84,9 @@ public class Hospitals {
         public String getState() {
             return state;
         }
+
+        public void addPatient(Patient patient) {
+            patients.add(patient);
+        }
     }
 }

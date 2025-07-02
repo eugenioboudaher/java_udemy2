@@ -30,4 +30,11 @@ public class Patient extends People {
         this.discharge = true;
     }
 
+    @Override
+    public String toString() {
+        return String.format("Patient: %s, ID: %d, Diagnosis: %s, Discharge: %s",
+            getName(), getId(), getDiagnosis(), getDischarge());
+}
+
+
 }

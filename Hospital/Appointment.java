@@ -50,4 +50,11 @@ public class Appointment {
     public void setDateTime(LocalDateTime dateTime) {
         this.dateTime = dateTime;
     }
+
+    public void showAppointment () {
+        System.out.printf("Nome: %s", this.doctor);
+        System.out.printf("Nome: %s", this.pacient);
+        System.out.printf("Nome: %s", this.room);
+        System.out.printf("Nome: %s", this.dateTime);
+    }
 }

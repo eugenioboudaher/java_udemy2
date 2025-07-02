@@ -39,6 +39,13 @@ public class Doctor extends People {
         this.college = college;
     }
 
+    @Override
+    public String toString() {
+        return String.format("Doctor: %s, Specialty: %s, Area: %s, College: %s",
+            getName(), specialty, area, college);
+}
+
+
     
 
 }
